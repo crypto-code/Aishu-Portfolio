@@ -448,10 +448,22 @@ h1.navbar-brand {
     top: 0;
 }
 
+.quality-container .quality-img-top:hover {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    transition: all 1s;
+}
+
 .quality-container .quality-img-bottom {
     height: 100px;
     position: absolute;
     bottom: 0;
+}
+
+.quality-container .quality-img-bottom:hover {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    transition: all 1s;
 }
 
 .caption-content h2 {
