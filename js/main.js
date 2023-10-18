@@ -100,6 +100,50 @@ $(document).ready(function(){
 		}
 	});
 
+    function isVisibleInViewport(elem)
+    {
+        var y = elem.offsetTop;
+        var height = elem.offsetHeight;
+
+        while ( elem === elem.offsetParent )
+            y += elem.offsetTop;
+
+        var maxHeight = y + height;
+        var isVisible = ( y < ( window.pageYOffset + window.innerHeight ) ) && ( maxHeight >= window.pageYOffset );
+        return isVisible;
+
+    }
+
+    function faderLeft(elem) {
+        if (isVisibleInViewport(elem)) {
+            elem.classList.add("fadeInLeftBig");
+            elem.classList.remove("fadeOutLeftBig");
+        } else {
+            elem.classList.remove("fadeInLeftBig");
+            elem.classList.add("fadeOutLeftBig");
+        }
+        setTimeout(() => faderLeft(elem), 10);
+    }
+
+    function faderRight(elem) {
+        if (isVisibleInViewport(elem)) {
+            elem.classList.add("fadeInRightBig");
+            elem.classList.remove("fadeOutRightBig");
+        } else {
+            elem.classList.remove("fadeInRightBig");
+            elem.classList.add("fadeOutRightBig");
+        }
+        setTimeout(() => faderRight(elem), 10);
+    }
+
+    var tops = document.getElementsByClassName("quality-img-top")
+    setTimeout(() => faderLeft(tops.item(0)), 10);
+    setTimeout(() => faderRight(tops.item(1)), 10);
+    var bottoms = document.getElementsByClassName("quality-img-bottom")
+    setTimeout(() => faderLeft(bottoms.item(0)), 10);
+    setTimeout(() => faderRight(bottoms.item(1)), 10);
+
+
     var txts = ['Product Design', 'Software Engineering', 'UI/UX'];
     var i = 0;
     var j = 0;
