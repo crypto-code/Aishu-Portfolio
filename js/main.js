@@ -79,6 +79,21 @@ $(function() {
 
 });
 
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.querySelectorAll(".tabcontent,tabcontent-hidden");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("tabcontent");
+        tabcontent[i].classList.add("tabcontent-hidden");
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).classList.add("tabcontent");
+    document.getElementById(tabName).classList.remove("tabcontent-hidden");
+    evt.currentTarget.className += " active";
+}
 $(document).ready(function(){
 
 	/* ========================================================================= */
@@ -109,7 +124,7 @@ $(document).ready(function(){
             y += elem.offsetTop;
 
         var maxHeight = y + height;
-        var isVisible = ( y < ( window.pageYOffset + window.innerHeight ) ) && ( maxHeight >= window.pageYOffset );
+        var isVisible = ( y < ( window.scrollY + window.innerHeight) ) && ( maxHeight >= window.scrollY );
         return isVisible;
 
     }
