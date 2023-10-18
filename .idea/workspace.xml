@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61521866-1f2c-47d4-8e3e-035242af5ea9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cv/CV.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Inter-VariableFont_slnt,wght.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/cohortconnect.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/portfolio/item2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/portfolio/item3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/portfolio/item4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/portfolio/item5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/portfolio/item6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697510056642</updated>
       <workItem from="1697510059693" duration="10402000" />
-      <workItem from="1697563749145" duration="27249000" />
+      <workItem from="1697563749145" duration="28124000" />
     </task>
     <servers />
   </component>
