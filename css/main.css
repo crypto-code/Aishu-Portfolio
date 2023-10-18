@@ -49,14 +49,16 @@ main > section {
     border-radius: 0;
     border: 0;
     position: relative;
-    text-transform: uppercase;
 }
 
 .btn-orange {
     background-color: #ffa833;
     box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
     padding: 15px 55px;
-    color: #fff;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 10px;
 }
 
 .btn-orange:hover {
@@ -451,7 +453,6 @@ h1.navbar-brand {
 .quality-container .quality-img-top:hover {
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
-    transition: all 1s;
 }
 
 .quality-container .quality-img-bottom {
@@ -463,7 +464,6 @@ h1.navbar-brand {
 .quality-container .quality-img-bottom:hover {
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
-    transition: all 1s;
 }
 
 .caption-content h2 {
@@ -736,46 +736,61 @@ h1.navbar-brand {
 }
 
 /*=================================================================
-	Services
+	Skills
 ==================================================================*/
 
-.service-icon {
-    border: 3px solid transparent;
-    display: inline-block;
-    height: 85px;
-    width: 85px;
-    line-height: 101px;
-
-    -webkit-transform: rotate(47deg);
-       -moz-transform: rotate(47deg);
-        -ms-transform: rotate(47deg);
-         -o-transform: rotate(47deg);
-            transform: rotate(47deg);
-
-    -webkit-transition: all 0.3s ease 0s;
-       -moz-transition: all 0.3s ease 0s;
-        -ms-transition: all 0.3s ease 0s;
-         -o-transition: all 0.3s ease 0s;
-            transition: all 0.3s ease 0s;
+.skill-title {
+    font-size: 64px!important;
 }
 
-.service-item:hover .service-icon {
-    border: 3px solid #009ee3;
-    margin-bottom: 20px;
-    color: #009ee3;
+
+.skill-item h3 {
+    font-size: 32px;
+    font-family: Inter, sans-serif;
 }
 
-.service-icon i {
-    -webkit-transform: rotate(-48deg);
-       -moz-transform: rotate(-48deg);
-        -ms-transform: rotate(-48deg);
-         -o-transform: rotate(-48deg);
-            transform: rotate(-48deg);
+.row {
+    margin-top: 50px;
 }
 
-.service-item h3 {
-    font-size: 20px;
-    text-transform: uppercase;
+.skill-box-parent {
+    padding: 20px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.skill-box {
+    background: #F8F8F8;
+    transition: transform 0.5s;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.skill-box:hover {
+    transform: scale(1.2);
+}
+
+.skill-item-parent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 20px
+}
+
+.skill-item-box {
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+.skill-item-break {
+    flex-basis: 100%;
+    height: 0;
 }
 
 /*=================================================================
@@ -1348,7 +1363,7 @@ textarea.form-control {
         margin-bottom: 50px;
     }
 
-    .service-item {
+    .skill-item {
         margin-bottom: 50px;
     }
 
@@ -1455,8 +1470,8 @@ textarea.form-control {
         margin: 0 25px 15px 0;
     }
 
-/* service */
-    .service-item {
+/* skill */
+    .skill-item {
         width: 100%;
     }
 
@@ -1557,9 +1572,9 @@ textarea.form-control {
         margin: 0 0 35px;
     }
 
-/* service */
+/* skill */
 
-    .service-item {
+    .skill-item {
         margin: 0 auto 50px;
         width: 55%;
     }
