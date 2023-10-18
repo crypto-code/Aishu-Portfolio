@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61521866-1f2c-47d4-8e3e-035242af5ea9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/img/awards/foodzyme.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -42,10 +43,12 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img/portfolio" />
+      <recent name="$PROJECT_DIR$/img/awards" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/portfolio" />
       <recent name="$PROJECT_DIR$/cv" />
       <recent name="$PROJECT_DIR$/fonts" />
       <recent name="$PROJECT_DIR$/img" />
@@ -61,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697510056642</updated>
       <workItem from="1697510059693" duration="10402000" />
-      <workItem from="1697563749145" duration="28124000" />
+      <workItem from="1697563749145" duration="30921000" />
     </task>
     <servers />
   </component>

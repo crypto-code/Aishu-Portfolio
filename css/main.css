@@ -812,6 +812,8 @@ h1.navbar-brand {
     list-style: none;
     text-align: center;
     width: 60%;
+    display: flex;
+    align-items: center;
 }
 
 .project-wrapper li {
@@ -822,7 +824,7 @@ h1.navbar-brand {
     cursor: pointer;
     margin: 5% 2%;
     position: relative;
-    width: 40%;
+    width: 42%;
     background-color: white;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
@@ -975,6 +977,51 @@ ul.external li a:hover {
 
 .portfolio-item:hover ul.external {
     top: 0;
+}
+
+/*============================================================
+	Awards
+==============================================================*/
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.card-image {
+    height: 20em;
+}
+
+.card-caption {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100%;
+}
+
+.card-title {
+    font-family: MyInter;
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.card-details {
+    font-family: MyInter;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.card-year {
+    font-family: MyInter;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 /*============================================================
