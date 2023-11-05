@@ -100,90 +100,90 @@ $(document).ready(function(){
 	/*	Menu item highlighting
 	/* ========================================================================= */
 
-	jQuery('#nav').singlePageNav({
-		offset: jQuery('#nav').outerHeight(),
-		filter: ':not(.external)',
-		speed: 2000,
-		currentClass: 'current',
-		easing: 'easeInOutExpo',
-		updateHash: true,
-		beforeStart: function() {
-			console.log('begin scrolling');
-		},
-		onComplete: function() {
-			console.log('done scrolling');
-		}
-	});
+	// jQuery('#nav').singlePageNav({
+	// 	offset: jQuery('#nav').outerHeight(),
+	// 	filter: ':not(.external)',
+	// 	speed: 2000,
+	// 	currentClass: 'current',
+	// 	easing: 'easeInOutExpo',
+	// 	updateHash: true,
+	// 	beforeStart: function() {
+	// 		console.log('begin scrolling');
+	// 	},
+	// 	onComplete: function() {
+	// 		console.log('done scrolling');
+	// 	}
+	// });
 
-    function isVisibleInViewport(elem)
-    {
-        var y = elem.offsetTop;
-        var height = elem.offsetHeight;
-
-        while ( elem === elem.offsetParent )
-            y += elem.offsetTop;
-
-        var maxHeight = y + height;
-        var isVisible = ( y < ( window.scrollY + window.innerHeight) ) && ( maxHeight >= window.scrollY );
-        return isVisible;
-
-    }
-
-    function faderLeft(elem) {
-        if (isVisibleInViewport(elem)) {
-            elem.classList.add("fadeInLeftBig");
-            elem.classList.remove("fadeOutLeftBig");
-        } else {
-            elem.classList.remove("fadeInLeftBig");
-            elem.classList.add("fadeOutLeftBig");
-        }
-        setTimeout(() => faderLeft(elem), 10);
-    }
-
-    function faderRight(elem) {
-        if (isVisibleInViewport(elem)) {
-            elem.classList.add("fadeInRightBig");
-            elem.classList.remove("fadeOutRightBig");
-        } else {
-            elem.classList.remove("fadeInRightBig");
-            elem.classList.add("fadeOutRightBig");
-        }
-        setTimeout(() => faderRight(elem), 10);
-    }
-
-    var tops = document.getElementsByClassName("quality-img-top")
-    setTimeout(() => faderLeft(tops.item(0)), 10);
-    setTimeout(() => faderRight(tops.item(1)), 10);
-    var bottoms = document.getElementsByClassName("quality-img-bottom")
-    setTimeout(() => faderLeft(bottoms.item(0)), 10);
-    setTimeout(() => faderRight(bottoms.item(1)), 10);
-
-
-    var txts = ['Product Design', 'Software Engineering', 'UI/UX'];
-    var i = 0;
-    var j = 0;
-    var speed = 100;
-    function typeWriter() {
-        if (i < txts[j].length) {
-            document.getElementById("type").innerHTML += txts[j].charAt(i);
-            i++;
-            if (i < txts[j].length) {
-                setTimeout(typeWriter, speed);
-            } else {
-                setTimeout(typeWriter, 10*speed);
-            }
-        } else if (i <= 2 * txts[j].length) {
-            document.getElementById("type").innerHTML = document.getElementById("type").innerHTML.slice(0, -1);
-            i++;
-            setTimeout(typeWriter, speed);
-        } else {
-            i = 0;
-            j = (j + 1) % 3;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
-    typeWriter();
+    // function isVisibleInViewport(elem)
+    // {
+    //     var y = elem.offsetTop;
+    //     var height = elem.offsetHeight;
+    //
+    //     while ( elem === elem.offsetParent )
+    //         y += elem.offsetTop;
+    //
+    //     var maxHeight = y + height;
+    //     var isVisible = ( y < ( window.scrollY + window.innerHeight) ) && ( maxHeight >= window.scrollY );
+    //     return isVisible;
+    //
+    // }
+    //
+    // function faderLeft(elem) {
+    //     if (isVisibleInViewport(elem)) {
+    //         elem.classList.add("fadeInLeftBig");
+    //         elem.classList.remove("fadeOutLeftBig");
+    //     } else {
+    //         elem.classList.remove("fadeInLeftBig");
+    //         elem.classList.add("fadeOutLeftBig");
+    //     }
+    //     setTimeout(() => faderLeft(elem), 10);
+    // }
+    //
+    // function faderRight(elem) {
+    //     if (isVisibleInViewport(elem)) {
+    //         elem.classList.add("fadeInRightBig");
+    //         elem.classList.remove("fadeOutRightBig");
+    //     } else {
+    //         elem.classList.remove("fadeInRightBig");
+    //         elem.classList.add("fadeOutRightBig");
+    //     }
+    //     setTimeout(() => faderRight(elem), 10);
+    // }
+    //
+    // var tops = document.getElementsByClassName("quality-img-top")
+    // setTimeout(() => faderLeft(tops.item(0)), 10);
+    // setTimeout(() => faderRight(tops.item(1)), 10);
+    // var bottoms = document.getElementsByClassName("quality-img-bottom")
+    // setTimeout(() => faderLeft(bottoms.item(0)), 10);
+    // setTimeout(() => faderRight(bottoms.item(1)), 10);
+    //
+    //
+    // var txts = ['Product Design', 'Software Engineering', 'UI/UX'];
+    // var i = 0;
+    // var j = 0;
+    // var speed = 100;
+    // function typeWriter() {
+    //     if (i < txts[j].length) {
+    //         document.getElementById("type").innerHTML += txts[j].charAt(i);
+    //         i++;
+    //         if (i < txts[j].length) {
+    //             setTimeout(typeWriter, speed);
+    //         } else {
+    //             setTimeout(typeWriter, 10*speed);
+    //         }
+    //     } else if (i <= 2 * txts[j].length) {
+    //         document.getElementById("type").innerHTML = document.getElementById("type").innerHTML.slice(0, -1);
+    //         i++;
+    //         setTimeout(typeWriter, speed);
+    //     } else {
+    //         i = 0;
+    //         j = (j + 1) % 3;
+    //         setTimeout(typeWriter, speed);
+    //     }
+    // }
+    //
+    // typeWriter();
 
 
 
@@ -248,94 +248,38 @@ $(document).ready(function(){
 });
 
 
-/* ==========  START GOOGLE MAP ========== */
-
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-
-	    var myLatLng = new google.maps.LatLng(22.402789, 91.822156);
-
-	    var mapOptions = {
-	        zoom: 15,
-	        center: myLatLng,
-	        disableDefaultUI: true,
-	        scrollwheel: false,
-	        navigationControl: true,
-	        mapTypeControl: false,
-	        scaleControl: false,
-	        draggable: true,
-
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
-            featureType: 'water',
-            stylers: [{
-                color: '#46bcec'
-            }, {
-                visibility: 'on'
-            }]
-        }, {
-            featureType: 'landscape',
-            stylers: [{
-                color: '#f2f2f2'
-            }]
-        }, {
-            featureType: 'road',
-            stylers: [{
-                saturation: -100
-            }, {
-                lightness: 45
-            }]
-        }, {
-            featureType: 'road.highway',
-            stylers: [{
-                visibility: 'simplified'
-            }]
-        }, {
-            featureType: 'road.arterial',
-            elementType: 'labels.icon',
-            stylers: [{
-                visibility: 'off'
-            }]
-        }, {
-            featureType: 'administrative',
-            elementType: 'labels.text.fill',
-            stylers: [{
-                color: '#444444'
-            }]
-        }, {
-            featureType: 'transit',
-            stylers: [{
-                visibility: 'off'
-            }]
-        }, {
-            featureType: 'poi',
-            stylers: [{
-                visibility: 'off'
-            }]
-        }]
-    };
-
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map-canvas');
-
-    // Create the Google Map using our element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
-
-    // Let's also add a marker while we're at it
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(22.402789, 91.822156),
-        map: map,
-		icon: 'img/icons/map-marker.png',
-    });
+function codeTransition() {
+    var home = document.getElementById("home-slider");
+    var code = document.getElementById("code");
+    $("#home-slider").one("transitionend", function() {
+        console.log("1");
+        home.style.display = "none";
+        code.style.display = "flex";
+        setTimeout(function () {
+            console.log("2");
+            code.classList.remove("codeOutTransition");
+            code.classList.add("codeInTransition");
+        }, 500);
+    })
+    document.getElementById("site-body").style.backgroundColor = "black";
+    home.classList.add("homeOutTransitionCode");
 }
 
-// ========== END GOOGLE MAP ========== //
+
+function codeOutTransition() {
+    var home = document.getElementById("home-slider");
+    var code = document.getElementById("code");
+    $("#code").one("transitionend", function() {
+        console.log("3");
+        home.style.display = "flex";
+        code.style.display = "none";
+        document.getElementById("site-body").style.backgroundColor = "white";
+        home.classList.remove("homeOutTransitionCode");
+    })
+    code.classList.add("codeOutTransition");
+    code.classList.remove("codeInTransition");
+}
+
 
 var wow = new WOW ({
 	offset:       75,          // distance to the element when triggering the animation (default is 0)

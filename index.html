@@ -53,34 +53,11 @@
         <!--
         Fixed Navigation
         ==================================== -->
-<!--        <header id="navigation" class="navbar-expand-lg navbar-inverse animated-header">-->
-<!--            <div class="page-container">-->
-<!--                <div class="navbar-header">-->
-<!--					&lt;!&ndash; logo &ndash;&gt;-->
-<!--					<h1 class="navbar-brand">-->
-<!--						<a href="#body">A</a>-->
-<!--					</h1>-->
-<!--					&lt;!&ndash; /logo &ndash;&gt;-->
-<!--                </div>-->
-
-<!--				&lt;!&ndash; main nav &ndash;&gt;-->
-<!--                <nav class="collapse navbar-collapse navbar-right" role="navigation">-->
-<!--                    <ul id="nav" class="nav navbar-nav">-->
-<!--                        <li><a class="hover-underline-animation" href="#body">About</a></li>-->
-<!--                        <li><a class="hover-underline-animation" href="#skill">Skills</a></li>-->
-<!--                        <li><a class="hover-underline-animation" href="#portfolio">Projects</a></li>-->
-<!--                        <li><a class="hover-underline-animation" href="#testimonials">Awards</a></li>-->
-<!--                    </ul>-->
-<!--                </nav>-->
-<!--				&lt;!&ndash; /main nav &ndash;&gt;-->
-
-<!--            </div>-->
-<!--        </header>-->
         <!--
         End Fixed Navigation
         ==================================== -->
 		
-		<main class="site-content" role="main">
+		<main id="site-body" class="site-content" role="main">
 		
 			<!--
 			Home Slider
@@ -93,7 +70,7 @@
 								<div class="slide-caption">
 									<div class="caption-content">
 										<h2 class="animated lightSpeedIn">Hi, I'm Aishwarya</h2>
-										<div class="h3 animated fadeInUpBig">I <span class="main-code">code</span>
+										<div class="h3 animated fadeInUpBig">I <span class="main-code" onclick="codeTransition()">code</span>
 											and
 											<div class="main-design">
 												<span class="circle top-left"></span>
@@ -119,6 +96,15 @@
 			</section>
 
 			<section id="code">
+				<header id="navigation">
+						<div class="navbar-header">
+							<!-- logo -->
+							<h1 class="navbar-brand">
+								<a id="code-home" onclick="codeOutTransition()" class="fa fa-home"></a>
+							</h1>
+							<!-- /logo -->
+						</div>
+				</header>
 				<h2 class="code-title">Programming to solve<br>problems in a <span>simple</span> way.</h2>
 				<div class="code-card">
 					<div class="title">
@@ -180,5 +166,6 @@
         <script src="js/wow.min.js"></script>
 		<!-- Custom Functions -->
         <script src="js/main.js"></script>
+		</main>
     </body>
 </html>

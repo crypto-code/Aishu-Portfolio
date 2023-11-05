@@ -273,15 +273,10 @@ main > section {
         -ms-transition: all 0.8s ease 0s;
          -o-transition: all 0.8s ease 0s;
             transition: all 0.8s ease 0s;
-
-    background-color: white;
     padding: 5px 0;
     margin-bottom: 1%;
     z-index: 100;
-}
-
-#navigation.animated-header {
-    padding: 20px 0;
+    width: 100%;
 }
 
 h1.navbar-brand {
@@ -294,7 +289,7 @@ h1.navbar-brand {
 .navbar-brand a {
     font-size: 64px;
     font-weight: 700;
-    color: black;
+    color: white;
     margin: 0;
     text-transform: uppercase;
 }
@@ -302,55 +297,31 @@ h1.navbar-brand {
 .navbar-brand a:hover {
     font-size: 64px;
     font-weight: 700;
-    color: black;
     margin: 0;
     text-transform: uppercase;
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #000000;
-    font-size: 32px;
+    -webkit-filter: drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.5));
     text-decoration: none;
 }
 
-.page-container {
-    width: 80%;
-    margin: auto;
-    background: white;
+/*=================================================================
+	Transition
+==================================================================*/
+
+#site-body {
+    transition: all 1s linear;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #000000;
-    font-size: 32px;
+.homeOutTransitionCode {
+    background-color: black!important;
 }
 
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: #000000;
+.codeInTransition {
+    opacity: 100%!important;
 }
 
-.hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color:
-            #000000;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-    color: #000000;
-}
-
-.hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    color: #000000;
+.codeOutTransition {
+    opacity: 0!important;
 }
 
 /*=================================================================
@@ -362,6 +333,8 @@ h1.navbar-brand {
     position: relative;
     padding: 0;
     height: 100vh;
+    background-color: white;
+    transition: background-color 1s linear, opacity 1s linear;
 }
 
 .sl-slider-wrapper {
@@ -440,6 +413,10 @@ h1.navbar-brand {
     border-radius: 10px;
 }
 
+.main-code:hover {
+    cursor: pointer;
+}
+
 .h3 .main-design {
     color: #8a06f3;
     text-underline: cornflowerblue;
@@ -449,6 +426,10 @@ h1.navbar-brand {
     padding: 5px;
     border-style: solid;
     position: relative;
+}
+
+.main-design:hover {
+    cursor: crosshair;
 }
 
 .main-design .circle {
@@ -515,10 +496,12 @@ h1.navbar-brand {
 
 #code {
     background-color: black;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: all 1s linear;
 }
 
 .code-title {
