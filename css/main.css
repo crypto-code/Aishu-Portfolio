@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: #000000;
     font-family: 'Open Sans', serif;
     line-height: 24px;
     font-size: 16px;
@@ -267,7 +267,7 @@ main > section {
 /*	Header
 /* ==========================================*/
 
-#navigation {
+.navigation {
     -webkit-transition: all 0.8s ease 0s;
        -moz-transition: all 0.8s ease 0s;
         -ms-transition: all 0.8s ease 0s;
@@ -292,6 +292,7 @@ h1.navbar-brand {
     color: white;
     margin: 0;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .navbar-brand a:hover {
@@ -496,12 +497,14 @@ h1.navbar-brand {
 
 #code {
     background-color: black;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: all 1s linear;
+}
+
+.arrow-button {
+    cursor: pointer;
 }
 
 .code-title {
@@ -532,6 +535,7 @@ h1.navbar-brand {
     display: flex;
     gap: 40px;
     font-weight: 600;
+    vertical-align: center;
 }
 
 .code-card .content {
@@ -577,4 +581,126 @@ h1.navbar-brand {
 
 .card-red {
     background: linear-gradient(#fa3131, #f56b6b);
+}
+
+/*=================================================================
+	Tab Section
+==================================================================*/
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    background: linear-gradient(#2B2B2B, #565555);
+    width: fit-content;
+    margin: auto;
+    border-radius: 30px;
+    padding: 10px 50px;
+    align-self: start;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    font-family: MyInter;
+    font-size: 24px;
+    color: white;
+    border-radius: 30px;
+}
+
+/* Change background color of buttons on hover */
+.tablinks:hover {
+    background: #A09F9F82;
+}
+
+/* Create an active/current tablink class */
+.tablinks.active {
+    background: #A09F9F82;
+}
+
+.tabcontent {
+    opacity: 1;
+}
+
+.tabcontent-hidden {
+    opacity: 0;
+}
+
+/*=================================================================
+	Project Details
+==================================================================*/
+
+#cohortconnect, #foodzyme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.project-details {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    margin-top: 2%;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    margin: auto;
+    width: 60%;
+    left: 10%;
+    gap: 20px;
+    align-self: start;
+}
+
+.project-wrapper *{
+    margin: auto;
+}
+
+.project-wrapper-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.project-wrapper img {
+    width: 60%;
+    margin: 1% auto;
+}
+
+.overview-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    vertical-align: top;
+}
+
+.overview-details h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.overview-details * {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.project-overview {
+    align-self: center;
+    vertical-align: center;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 500;
 }

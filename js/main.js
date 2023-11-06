@@ -79,23 +79,52 @@ $(function() {
 
 });
 
-function openTab(evt, tabName) {
+function openTab(evt, tabName, tabParent) {
     var i, tabcontent, tablinks;
-    tabcontent = document.querySelectorAll(".tabcontent,tabcontent-hidden");
+    tabcontent = document.querySelectorAll(".tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("tabcontent");
-        tabcontent[i].classList.add("tabcontent-hidden");
+        if (tabcontent[i].id.includes(tabParent)) {
+            tabcontent[i].classList.add("tabcontent-hidden");
+            tabcontent[i].classList.remove("tabcontent");
+            $(tabcontent[i]).fadeOut(1);
+        }
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        if (tablinks[i].id.includes(tabParent)) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
     }
     document.getElementById(tabName).classList.add("tabcontent");
     document.getElementById(tabName).classList.remove("tabcontent-hidden");
+    $(document.getElementById(tabName)).fadeIn(2000);
     evt.currentTarget.className += " active";
 }
-$(document).ready(function(){
 
+function openSection(sectionId) {
+    var sections = document.getElementsByTagName("section");
+    for (var i = 0; i < sections.length; i++) {
+        if (sections[i].id !== sectionId) {
+            $(sections[i]).fadeOut(1000);
+        } else {
+            $(sections[i]).fadeIn(1500);
+        }
+    }
+    $("html").animate({scrollTop: 0}, 1000);
+}
+
+$(document).ready(function(){
+    var i, tabcontent;
+    tabcontent = document.querySelectorAll(".tabcontent-hidden");
+    for (i = 0; i < tabcontent.length; i++) {
+        $(tabcontent[i]).fadeOut(10);
+    }
+    var sections;
+    sections = document.querySelectorAll("section");
+    for (i = 0; i < sections.length; i++) {
+        $(sections[i]).fadeOut(10);
+    }
+    $("#home-slider").fadeIn(200);
 	/* ========================================================================= */
 	/*	Menu item highlighting
 	/* ========================================================================= */
