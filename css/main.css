@@ -727,7 +727,7 @@ h1.navbar-brand {
 }
 
 .design-title {
-    margin-bottom: 5%;
+    margin-bottom: 7%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -811,4 +811,89 @@ h1.navbar-brand {
     border-top-left-radius: 20px;
     top: 200%;
     left: -15%;
+}
+
+.design-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 50px;
+    align-self: center;
+}
+
+.design-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 550px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.design-card .title {
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
+.design-card .desc {
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    line-height: 150%;
+}
+
+.design-card .skills {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.design-card .skills img {
+    width: 50px;
+    height: 50px;
+}
+
+.design-card-purple {
+    background-color: #F0E3FF;
+    border: 3px #A659FF solid;
+}
+
+.design-card-purple .title {
+    background-color: #A659FF;
+
+}
+
+.design-card-blue {
+    background-color: #DCF0FF;
+    border: 3px #52B4FD solid;
+}
+
+.design-card-blue .title {
+    background-color: #52B4FD;
+}
+
+.design-card-green {
+    background-color: #DCF3E7;
+    border: 3px #8CE2B5 solid;
+}
+
+.design-card-green .title {
+    background-color: #8CE2B5;
+}
+
+.design-card-yellow {
+    background-color: #FEF8DF;
+    border: 3px #FFE36E solid;
+}
+
+.design-card-yellow .title {
+    background-color: #FFE36E;
+    color: black;
 }
