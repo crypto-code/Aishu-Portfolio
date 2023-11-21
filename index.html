@@ -72,7 +72,7 @@
 										<h2 class="animated lightSpeedIn">Hi, I'm Aishwarya</h2>
 										<div class="h3 animated fadeInUpBig">I <span class="main-code" onclick="openSection('code')">code</span>
 											and
-											<div class="main-design">
+											<div class="main-design" onclick="openSection('design')">
 												<span class="circle top-left"></span>
 												<span class="circle bottom-left"></span>
 												design
@@ -95,160 +95,18 @@
 				</div><!-- /slider-wrapper -->
 			</section>
 
-			<section id="code">
-				<header class="navigation">
-						<div class="navbar-header">
-							<h1 class="navbar-brand">
-								<a onclick="openSection('home-slider')" class="code-home fa fa-home"></a>
-							</h1>
-						</div>
-				</header>
-				<h2 class="code-title">Programming to solve<br>problems in a <span>simple</span> way.</h2>
-				<div class="code-card">
-					<div class="title">
-						CohortConnect
-						<div class="skill-card-container">
-							<div class="skill-card card-pink">Java</div>
-							<div class="skill-card card-purple">Backend</div>
-						</div>
-						<div class="fa fa-arrow-circle-right arrow-button" onclick="openSection('cohortconnect')"></div>
-					</div>
-					<div class="content">
-						Developed a 15k lines of code desktop application to facilitate networking among computer science students in university.
-					</div>
-					<div class="img-container">
-						<img src="img/portfolio/cohortconnect.png"/>
-					</div>
-				</div>
-
-				<div class="code-card">
-					<div class="title">
-						Foodzyme
-						<div class="skill-card-container">
-							<div class="skill-card card-blue">Arduino</div>
-							<div class="skill-card card-red">C</div>
-						</div>
-						<div class="fa fa-arrow-circle-right arrow-button" onclick="openSection('foodzyme')"></div>
-					</div>
-					<div class="content">
-						Developed functioning prototype of a system to convert food waste to household cleaning agent in residential areas to promote food waste upcycling.
-					</div>
-					<div class="img-container">
-						<img src="img/portfolio/foodzyme.jpeg"/>
-					</div>
-				</div>
-			</section>
+			<section id="code"></section>
 			<!--
 			End Home SliderEnd
 			==================================== -->
 
 			<section id="cohortconnect">
-				<header class="navigation">
-					<div class="navbar-header">
-						<h1 class="navbar-brand">
-							<a onclick="openSection('code')" class="code-home fa fa-code"></a>
-						</h1>
-					</div>
-				</header>
-				<div class="tab">
-					<button class="tablinks active" id="cohortconnect-1" onclick="openTab(event, 'cohortconnect-overview','cohortconnect-')">Overview</button>
-					<button class="tablinks" id="cohortconnect-2" onclick="openTab(event, 'cohortconnect-dp', 'cohortconnect-')">Development Process</button>
-					<button class="tablinks" id="cohortconnect-3" onclick="openTab(event, 'cohortconnect-outcomes', 'cohortconnect-')">Outcomes</button>
-				</div>
-				<div class="project-details">
-					<div id="cohortconnect-overview" class="project-wrapper tabcontent">
-						<h1 class="project-wrapper-title">CohortConnect</h1>
-						<img src="img/portfolio/cohortconnect.png"/>
-						<div class="overview-details">
-							<div class="project-overview" style="width: 40%">
-								<div><h2>Project Overview</h2></div>
-								<div>
-									CohortConnect is an advanced desktop address book developed by a team as part of CS2103T.
-									It's designed for Computer Science students, offering a Command Line Interface (CLI) with the benefits of a Graphical User Interface (GUI).
-									The address book can manage large contact groups, features easy import, the ability to mark favorite contacts, and helps users find contacts attending the same events.
-									Additionally, it facilitates networking with like-minded students through a "Find A Buddy" feature that matches users based on similar interests using GitHub's metadata and a proprietary algorithm.
-								</div>
-							</div>
-
-							<div class="project-overview" style="width: 40%">
-								<h2>My Role</h2>
-								Backend Developer
-								<br/><br/><br/><br/>
-								<h2>My Contributions</h2>
-								<ul>
-									<li>Aided the design of the application frontend</li>
-									<li>Developed backend api calls for application functionality</li>
-									<li>Conducted thorough application testing to ensure functionality</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div id="cohortconnect-dp" class="project-wrapper tabcontent-hidden">
-						<h1 class="project-wrapper-title">Development of CohortConnect</h1>
-					</div>
-
-					<div id="cohortconnect-outcomes" class="project-wrapper tabcontent-hidden">
-						<h1 class="project-wrapper-title">Outcomes of CohortConnect</h1>
-					</div>
-				</div>
 			</section>
 
 			<section id="foodzyme">
-				<header class="navigation">
-					<div class="navbar-header">
-						<h1 class="navbar-brand">
-							<a onclick="openSection('code')" class="code-home fa fa-code"></a>
-						</h1>
-					</div>
-				</header>
-				<div class="tab">
-					<button class="tablinks active" id="foodzyme-1" onclick="openTab(event, 'foodzyme-overview', 'foodzyme-')">Overview</button>
-					<button class="tablinks" id="foodzyme-2" onclick="openTab(event, 'foodzyme-dp', 'foodzyme-')">Development Process</button>
-					<button class="tablinks" id="foodzyme-3" onclick="openTab(event, 'foodzyme-outcomes', 'foodzyme-')">Outcomes</button>
-				</div>
-				<div class="project-details">
-					<div id="foodzyme-overview" class="project-wrapper tabcontent">
-						<h1 class="project-wrapper-title">Foodzyme</h1>
-						<img src="img/portfolio/foodzyme.jpeg"/>
-						<div class="overview-details">
-							<div class="project-overview" style="width: 40%">
-								<div><h2>Project Overview</h2></div>
-								<div>
-									Singapore faces a significant food waste problem, and the domestic sector is the leading contributor to this issue.
-									Yet, present food waste recycling methods are inadequate and inconvenient for individuals.
-									This project aims to upcycle food waste into a value-added output – eco-enzyme – through automation, thereby empowering residential communities to upcycle their food waste.
-									The envisioned solution is a “vending machine-like” system that allows residents to deposit their food waste, which is then automatically processed into eco-enzyme.
-									Compared to other products upcycled from food waste, eco-enzyme is a versatile cleaning solution that allows Singaporeans to reap the rewards of their efforts when they upcycle their food waste.
-									Furthermore, the by-product of the process can also be used as compost by community gardens.
-									This project thus aims to be a step forward towards achieving a more sustainable food waste management strategy in Singapore’s residential estates through leveraging technology to inculcate food waste upcycling habits.
-
-								</div>
-							</div>
-
-							<div class="project-overview" style="width: 40%">
-								<h2>My Role</h2>
-								Arduino Developer
-								<br/><br/><br/><br/>
-								<h2>My Contributions</h2>
-								<ul>
-									<li>Built Arduino circuits with different components such as screen, keypad, NEMA motors and weight sensors</li>
-									<li>Programmed the Arduino's for our prototype</li>
-									<li>Conducted thorough application testing of hardware to ensure functionality</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div id="foodzyme-dp" class="project-wrapper tabcontent-hidden">
-						<h1 class="project-wrapper-title">Development of Foodzyme</h1>
-					</div>
-
-					<div id="foodzyme-outcomes" class="project-wrapper tabcontent-hidden">
-						<h1 class="project-wrapper-title">Foodzyme Outcome</h1>
-					</div>
-				</div>
 			</section>
+
+			<section id="design"></section>
 		
 		<!-- Essential jQuery Plugins
 		================================================== -->

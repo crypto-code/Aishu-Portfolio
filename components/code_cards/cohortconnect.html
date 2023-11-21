@@ -1,0 +1,49 @@
+<header class="navigation">
+  <div class="navbar-header">
+    <h1 class="navbar-brand">
+      <a onclick="openSection('code')" class="code-home fa fa-code"></a>
+    </h1>
+  </div>
+</header>
+<div class="tab">
+  <button class="tablinks active" id="cohortconnect-1" onclick="openTab(event, 'cohortconnect-overview','cohortconnect-')">Overview</button>
+  <button class="tablinks" id="cohortconnect-2" onclick="openTab(event, 'cohortconnect-dp', 'cohortconnect-')">Development Process</button>
+  <button class="tablinks" id="cohortconnect-3" onclick="openTab(event, 'cohortconnect-outcomes', 'cohortconnect-')">Outcomes</button>
+</div>
+<div class="project-details">
+  <div id="cohortconnect-overview" class="project-wrapper tabcontent">
+    <h1 class="project-wrapper-title">CohortConnect</h1>
+    <img src="img/portfolio/cohortconnect.png"/>
+    <div class="overview-details">
+      <div class="project-overview" style="width: 40%">
+        <div><h2>Project Overview</h2></div>
+        <div>
+          CohortConnect is an advanced desktop address book developed by a team as part of CS2103T.
+          It's designed for Computer Science students, offering a Command Line Interface (CLI) with the benefits of a Graphical User Interface (GUI).
+          The address book can manage large contact groups, features easy import, the ability to mark favorite contacts, and helps users find contacts attending the same events.
+          Additionally, it facilitates networking with like-minded students through a "Find A Buddy" feature that matches users based on similar interests using GitHub's metadata and a proprietary algorithm.
+        </div>
+      </div>
+
+      <div class="project-overview" style="width: 40%">
+        <h2>My Role</h2>
+        Backend Developer
+        <br/><br/><br/><br/>
+        <h2>My Contributions</h2>
+        <ul>
+          <li>Aided the design of the application frontend</li>
+          <li>Developed backend api calls for application functionality</li>
+          <li>Conducted thorough application testing to ensure functionality</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="cohortconnect-dp" class="project-wrapper tabcontent-hidden">
+    <h1 class="project-wrapper-title">Development of CohortConnect</h1>
+  </div>
+
+  <div id="cohortconnect-outcomes" class="project-wrapper tabcontent-hidden">
+    <h1 class="project-wrapper-title">Outcomes of CohortConnect</h1>
+  </div>
+</div>

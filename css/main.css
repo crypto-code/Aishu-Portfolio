@@ -277,6 +277,9 @@ main > section {
     margin-bottom: 1%;
     z-index: 100;
     width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 h1.navbar-brand {
@@ -532,10 +535,12 @@ h1.navbar-brand {
 
 .code-card .title {
     font-size: 40px;
+    height: 100%;
     display: flex;
     gap: 40px;
     font-weight: 600;
-    vertical-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 .code-card .content {
@@ -703,4 +708,107 @@ h1.navbar-brand {
     margin: auto;
     font-size: 20px;
     font-weight: 500;
+}
+
+/*=================================================================
+	Code Section
+==================================================================*/
+
+#design {
+    background-image: radial-gradient(rgba(170, 170, 170) 2px, white 0);
+    background-size: 60px 60px;
+    background-position: -19px -19px;
+    background-blend-mode: soft-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.design-title {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.design-title * {
+    text-align: center;
+    color: black;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.design-pink {
+    background: #C7B9FF;
+    padding-inline: 10px!important;
+    padding: 20px;
+}
+
+.design-yellow {
+    background: #FDC602;
+    padding-inline: 10px!important;
+    padding: 20px;
+    position: relative;
+}
+
+.break {
+    display: block;
+    margin: 100px 0;
+}
+
+.design-pointer {
+    background-image: url("img/icons/arrow.png");
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+}
+
+.design-pointer img {
+    width: 50px;
+    height: 50px;
+}
+
+.design-pointer-text {
+    font-size: 20px;
+    position: absolute;
+    bottom: 60%;
+    left: 80%;
+    background: #2196F3;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.design-sign {
+    position: absolute;
+    left: 61%;
+    top: -70%;
+}
+
+.design-response * {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    width: fit-content;
+}
+
+.design-response strong {
+    font-weight: 700;
+}
+
+.design-response {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    background: #F24D1E;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    top: 200%;
+    left: -15%;
 }

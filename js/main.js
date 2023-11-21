@@ -86,7 +86,7 @@ function openTab(evt, tabName, tabParent) {
         if (tabcontent[i].id.includes(tabParent)) {
             tabcontent[i].classList.add("tabcontent-hidden");
             tabcontent[i].classList.remove("tabcontent");
-            $(tabcontent[i]).fadeOut(1);
+            $(tabcontent[i]).fadeOut(100);
         }
     }
     tablinks = document.getElementsByClassName("tablinks");
@@ -107,13 +107,17 @@ function openSection(sectionId) {
         if (sections[i].id !== sectionId) {
             $(sections[i]).fadeOut(1000);
         } else {
-            $(sections[i]).fadeIn(1500);
+            $(sections[i]).fadeIn(2000);
         }
     }
-    $("html").animate({scrollTop: 0}, 1000);
+    $("html").animate({scrollTop: 0}, 500);
 }
 
 $(document).ready(function(){
+    $("#code").load("./components/code.html");
+    $("#cohortconnect").load("./components/code_cards/cohortconnect.html");
+    $("#foodzyme").load("./components/code_cards/foodzyme.html");
+    $("#design").load("./components/design.html");
     var i, tabcontent;
     tabcontent = document.querySelectorAll(".tabcontent-hidden");
     for (i = 0; i < tabcontent.length; i++) {
